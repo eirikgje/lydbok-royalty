@@ -1,0 +1,10 @@
+<table id='performer-payments-table'>
+</table>
+
+<script>
+    var me = document.currentScript.ownerDocument;
+    var table = me.querySelector("#performer-payments-table");
+
+    var container = document.querySelector("#performer-payments");
+    container.appendChild(table.cloneNode(true));
+</script>

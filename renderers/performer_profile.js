@@ -1,0 +1,3 @@
+function showPerformerProfile(performer) {
+    return;
+}

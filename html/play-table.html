@@ -1,0 +1,10 @@
+<table id='play-table'>
+</table>
+
+<script>
+    var me = document.currentScript.ownerDocument;
+    var table = me.querySelector("#play-table");
+
+    var container = document.querySelector("#play-tab");
+    container.appendChild(table.cloneNode(true));
+</script>

@@ -1,0 +1,15 @@
+{
+  "name": "lydbok-electron",
+  "version": "1.0.0",
+  "description": "An audiobook royalty tracker",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "eirikgje",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "~1.7.8",
+    "electron-prebuilt": "^1.4.13"
+  }
+}

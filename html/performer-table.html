@@ -1,0 +1,10 @@
+<table id='performer-table'>
+</table>
+
+<script>
+    var me = document.currentScript.ownerDocument;
+    var table = me.querySelector("#performer-table");
+
+    var container = document.querySelector("#performer-tab");
+    container.appendChild(table.cloneNode(true));
+</script>
