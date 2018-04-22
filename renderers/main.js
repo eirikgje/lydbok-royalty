@@ -4,9 +4,7 @@ const playProfileRenderer = require('../renderers/play_profile.js')
 
 function populatePerformerTable() {
     var data = datamodel.getData();
-    var count = 0;
     for (performer in data['Performers']) {
-        count = count +1;
         createPerformerTableRow(performer, data['Performers'][performer]);
     }
 }
@@ -29,10 +27,7 @@ function createPerformerTableRow(performer, performer_data) {
 
 function populatePlayTable() {
     var data = datamodel.getData();
-    var count = 0;
-    console.log('HOOOO');
     for (play in data['Plays']) {
-        count = count + 1;
         createPlayTableRow(play, data['Plays'][play]);
     }
 }
