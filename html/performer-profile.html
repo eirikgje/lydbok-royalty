@@ -1,21 +1,85 @@
-<link rel="import" href="html/performer-payments-table.html">
-<link rel="import" href="html/performer-plays-table.html">
+<!--link rel="import" href="performer-payments-table.html">
+<link rel="import" href="performer-plays-table.html"-->
 
-<div id='performer-basic-info'>
-    <div id='performer-name-input'>
+<div id='performer-basic-info' class='performer-profile'>
+    <div id='performer-name-headline' class='performer-profile'>
+        Name:
+    <div id='performer-name-input' class='performer-profile'>
+        Skjer
     </div>
-    <div id='performer-name-input-edit'>
+    <button id='performer-name-input-edit' class='performer-profile'>Edit</button>
+    <button id='performer-name-input-save' class='performer-profile hidden-onload'>Save</button>
+    <div id='performer-joined-headline' class='performer-profile'>
+        Joined: 
     </div>
-    <div id='performer-name-input-save'>
+    <div id='performer-joined-input' class='performer-profile'>
+        Morn
     </div>
-    <div id='performer-joined-input'>
-    </div>
-    <div id='performer-joined-input-edit'>
-    </div>
-    <div id='performer-joined-input-save'>
-    </div>
+    <select id='performer-joined-input-select' class='performer-profile hidden-onload'>
+        <option value="One">One</option>
+        <option value="Two">Two</option>
+        <option value="Three">Three</option>
+    </select>
+    <button id='performer-joined-input-edit' class='performer-profile'>Edit
+    </button>
+    <button id='performer-joined-input-save' class='performer-profile hidden-onload'>Save
+    </button>
 </div>
-<div id='performer-payments'>
-</div>
-<div id='performer-plays'>
+<table id='performer-payments' class='performer-profile payments-table'>
+    <tr>
+        <th> Period </th>
+        <th> Amount </th>
+        <th> Paid? </th>
+    </tr>
+    <tr>
+        <td> Q3 </td>
+        <td> 400$ </td>
+        <td>
+            <div class='performer-profile payment-status'>
+                Unpaid
+            </div>
+            <select class='performer-profile hidden-onload displayNone payment-status-menu'>
+                <option value='paid'>Paid</option>
+                <option value='unpaid'>Unpaid</option>
+                <option value='transfer'>Transfer to...</option>
+            </select>
+            <select class='performer-profile hidden-onload displayNone payment-period-menu'>
+                <option value='Q1'>Q1</option>
+                <option value='Q2'>Q2</option>
+                <option value='Q3'>Q3</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td> Q4 </td>
+        <td> 239$ </td>
+        <td>
+            <div class='performer-profile payment-status'>
+                Paid
+            </div>
+            <select class='performer-profile hidden-onload displayNone payment-status-menu'>
+                <option value='paid'>Paid</option>
+                <option value='unpaid'>Unpaid</option>
+                <option value='transfer'>Transfer to...</option>
+            </select>
+            <select class='performer-profile hidden-onload displayNone payment-period-menu'>
+                <option value='Q1'>Q1</option>
+                <option value='Q2'>Q2</option>
+                <option value='Q3'>Q3</option>
+            </select>
+        </td>
+    </tr>
+</table>
+<button id='performer-payments-finished-editing' class='performer-profile displayNone hidden-onload'>Finished editing</button>
+<button id='performer-payments-edit' class='performer-profile'>Edit</button>
+<div id='performer-plays' class='performer-profile'>
+    Performing in the following plays:
+    <ul>
+        <li> Halla <button class='performer-plays-delete displayNone'>Delete</button></li>
+        <li> Skjera <button class='performer-plays-delete displayNone'>Delete</button></li>
+        <li> Morn <button class='performer-plays-delete displayNone'>Delete</button></li>
+    </ul>
+    <button id='performer-plays-edit'>Edit</button>
+    <button id='performer-plays-finished' class='displayNone'>Finished editing</button>
+    <button id='performer-plays-add' class='displayNone'>Add new play</button>
 </div>

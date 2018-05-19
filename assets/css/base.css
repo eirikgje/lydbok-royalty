@@ -36,3 +36,23 @@ table, th, td {
 .visible-tab {
     display: block;
 }
+
+.performer-profile {
+    display: none;
+}
+
+.play-profile {
+    display: none;
+}
+
+.displayNone {
+    display: none;
+}
+
+.displayBlock {
+    display: block;
+}
+
+.payments-table {
+    width: 100%;
+}

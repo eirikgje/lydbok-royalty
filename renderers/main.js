@@ -1,6 +1,9 @@
 const datamodel = require('../data/datamodel.js')
+const utils = require('../renderers/utils.js')
 const performerProfileRenderer = require('../renderers/performer_profile.js')
 const playProfileRenderer = require('../renderers/play_profile.js')
+
+window.$ = window.jQuery = require('../node_modules/jquery/dist/jquery.min.js');
 
 function populatePerformerTable() {
     var data = datamodel.getData();
@@ -49,20 +52,14 @@ function createPlayTableRow(play, play_data) {
 }
 
 function openTab (evt, tabName) {
-    var i, tabContent, tabLinks;
 
-    tabContent = document.getElementsByClassName('tabcontent');
-    for (i=0; i<tabContent.length; i++) {
-        tabContent[i].style.display = "none";
-    }
+    utils.toggleVisible($('.tabcontent'), false);
+    $('.tablinks').removeClass('active');
+    // Tabname is both a class and an id - here we use the class since we want
+    // to toggle all of it
+    utils.toggleVisible($('.' + tabName), true);
+    $(evt.currentTarget).addClass('active');
 
-    tabLinks = document.getElementsByClassName('tablinks');
-    for (i=0; i < tabLinks.length; i++) {
-        tabLinks[i].className = tabLinks[i].className.replace(" active", "");
-    }
-
-    document.getElementById(tabName).style.display = "block";
-    evt.currentTarget.className += " active";
 
 }
 
